@@ -1,31 +1,32 @@
-// mainwindow.cpp
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    addRecipeDialog = new AddRecipeDialog(this);
-
-    connect(ui->addRecipeButton, &QPushButton::clicked, this, &MainWindow::openAddRecipeDialog);
+    database = new Database();
+    if (!database->open()) {
+        qDebug() << "Error: Failed to connect to database.";
+        // Handle error
+    }
+    database->createRecipeTable();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete database;
 }
 
-void MainWindow::openAddRecipeDialog()
-{
-    addRecipeDialog->clearFields(); // Optional: Clear fields if dialog is reused
-    addRecipeDialog->show();
+void MainWindow::on_addRecipeButton_clicked() {
+    addRecipeWindow = new AddRecipeWindow(database);
+    addRecipeWindow->show();
 }
 
-void MainWindow::addRecipe(QString name, QString portionSize, QList<QPair<QString, QString>> ingredients, QString notes)
-{
-    // Handle adding recipe data here (e.g., add to database or store in memory)
-    // Update UI to reflect new recipe added
+void MainWindow::on_browseRecipesButton_clicked() {
+    browseRecipeWindow = new BrowseRecipeWindow(database);
+    browseRecipeWindow->show();
 }
-
