@@ -3,31 +3,38 @@
 
 #include <QString>
 #include <QList>
-#include <QPair>
+#include <QSet>  // Include QSet header
 
 class Recipe
 {
 public:
     Recipe();
-    Recipe(const QString &name, const QString &portionSize, const QList<QPair<QString, QString>> &ingredients, const QString &notes);
 
-    QString name() const;
-    void setName(const QString &name);
+    QString getName() const;
+    void setName(const QString &value);
 
-    QString portionSize() const;
-    void setPortionSize(const QString &portionSize);
+    QString getType() const;
+    void setType(const QString &value);
 
-    QList<QPair<QString, QString>> ingredients() const;
-    void setIngredients(const QList<QPair<QString, QString>> &ingredients);
+    QString getCuisine() const;
+    void setCuisine(const QString &value);
 
-    QString notes() const;
-    void setNotes(const QString &notes);
+    QString getIngredients() const;
+    void setIngredients(const QString &value);
+
+    QString getInstructions() const;
+    void setInstructions(const QString &value);
+
+    QList<QString> getTags() const;
+    void setTags(const QList<QString> &value);
 
 private:
-    QString m_name;
-    QString m_portionSize;
-    QList<QPair<QString, QString>> m_ingredients;
-    QString m_notes;
+    QString name;
+    QString type;
+    QString cuisine;
+    QString ingredients;
+    QString instructions;
+    QList<QString> tags;  // Use QList<QString> for tags
 };
 
 #endif // RECIPE_H
