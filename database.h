@@ -1,26 +1,22 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QSqlQuery>
-#include <QtSql/QSqlError>
-#include <QDebug>
-#include <QList> // Include QList for using QList<QPair<...>>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
+#include "recipe.h"
 
-// Include QPair for using QPair<QString, QString>
-#include <QPair>
-#include <QString>
-#include <recipe.h>
-
-class Database
-{
+class Database {
 public:
-    static bool initialize();
-    static bool addRecipe(const QString &name, const QString &portionSize, const QList<QPair<QString, QString>> &ingredients, const QString &notes);
-    static QList<Recipe> filterRecipes(const QString &type);
+    Database();
+    bool open();
+    void close();
+    bool createRecipeTable();
+    bool addRecipe(const Recipe& recipe);
+    QList<Recipe> getRecipes(const QString& type, const QString& cuisine, const QList<QString>& tags);
 
 private:
-    static QSqlDatabase db;
+    QSqlDatabase m_db;
 };
 
 #endif // DATABASE_H
