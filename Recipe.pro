@@ -1,5 +1,6 @@
-QT       += core gui
-QT += core gui sql
+QT       += core gui sql
+QT += sql widgets  # Example of including necessary Qt modules
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,19 +18,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    addrecipedialog.cpp \
+    addrecipewindow.cpp \
+    browserecipewindow.cpp \
     database.cpp \
     main.cpp \
     mainwindow.cpp \
     recipe.cpp
 
 HEADERS += \
-    addrecipedialog.h \
+    addrecipewindow.h \
+    browserecipewindow.h \
     database.h \
     mainwindow.h \
     recipe.h
 
 FORMS += \
+    addrecipewindow.ui \
+    browserecipewindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.
