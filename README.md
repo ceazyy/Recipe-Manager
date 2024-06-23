@@ -46,7 +46,7 @@ Open the application.
 Navigate to the "Browse Recipes" section.
 Use the filter options to refine the list of recipes displayed.
 
-##Contributing
+## Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
 1. Fork the project.
@@ -55,6 +55,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch (git push origin feature/AmazingFeature).
 5. Open a pull request.
    
-##Contact
+## Contact
 Your Name - ceazy
 Project Link: https://github.com/ceazyy/Recipe-Manageer
