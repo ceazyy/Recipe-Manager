@@ -6,41 +6,215 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>677</width>
+    <height>808</height>
    </rect>
   </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPushButton" name="addRecipeButton">
-      <property name="text">
-       <string>Add a Recipe</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="browseRecipesButton">
-      <property name="text">
-       <string>Browse Recipes</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>400</width>
-     <height>25</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>110</y>
+      <width>331</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>image.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>20</y>
+      <width>471</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Apply to QLabel (example) */
+QLabel {
+    color: #333333; /* Text color */
+    font-family: &quot;Clothe PERSONAL USE ONLY&quot;; /* Font family */
+    font-size: 58px; /* Font size */
+    font-weight: normal; /* Font weight (normal, bold, etc.) */
+    text-align: left; /* Text alignment */
+    padding: 5px; /* Padding around text */
+}
+
+/* Apply to all widgets */
+* {
+    /* Global text color */
+    color: #333333;
+    /* Global font */
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+/* Example of specific text styling based on widget state */
+QLabel:disabled {
+    color: #999999; /* Color for disabled state */
+    font-style: italic; /* Italicize text for disabled state */
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Recipe Manager</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>300</y>
+      <width>441</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Apply to QLabel (example) */
+QLabel {
+    color: #333333; /* Text color */
+    font-family: &quot;Clothe PERSONAL USE ONLY&quot;; /* Font family */
+    font-size: 16px; /* Font size */
+    font-weight: normal; /* Font weight (normal, bold, etc.) */
+    text-align: left; /* Text alignment */
+    padding: 5px; /* Padding around text */
+}
+
+/* Apply to all widgets */
+* {
+    /* Global text color */
+    color: #333333;
+    /* Global font */
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+/* Example of specific text styling based on widget state */
+QLabel:disabled {
+    color: #999999; /* Color for disabled state */
+    font-style: italic; /* Italicize text for disabled state */
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Grilled Salmon Salad is a vibrant, nutritious, and flavorful dish that combines the rich, buttery taste of grilled salmon with the fresh, crisp textures of mixed greens and assorted vegetables. This salad is not only visually appealing with its array of colors, but it's also packed with essential nutrients, making it a popular choice for health-conscious individuals.</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>730</y>
+      <width>681</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="browseRecipesButton">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>10</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 50px;  /* Adjust the radius to make the button round */
+    background-color: #000000;  /* Example background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Background color when hovering */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addRecipeButton">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 50px;  /* Adjust the radius to make the button round */
+    background-color: #000000;  /* Example background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Background color when hovering */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Add Recipes</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>
